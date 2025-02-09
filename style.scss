@@ -1,18 +1,44 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100vh;
+  width: 100vw;
 }
 
-html, body{
-    height: 100%;
-    width: 100%;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.card{
-    border: 1px solid pink;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+$primary-color: salmon;
+$card-border-radius: 10px;
 
+.card {
+  border: 2px solid $primary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: fit-content;
+  padding: 40px;
+  border-radius: $card-border-radius;
+
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-weight: 500;
+  }
+}
